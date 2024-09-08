@@ -17,7 +17,7 @@ bitmap.compressJpegli(outputStream = bos, quality = 70)
 # Add to project
 
 ```groovy
-implementation 'io.github.awxkee:jpegli-coder:1.1.0' // or any version above picker from release tags
+implementation 'io.github.awxkee:jpegli-coder:1.0.0' // or any version above picker from release tags
 ```
 
 # Copyrights
