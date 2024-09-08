@@ -16,12 +16,6 @@ plugins {
 }
 
 mavenPublishing {
-    if (System.getenv("PUBLISH_STATE") == "Release") {
-        signAllPublications()
-    }
-}
-
-mavenPublishing {
     configure(
         AndroidMultiVariantLibrary(
             sourcesJar = true,

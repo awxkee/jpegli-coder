@@ -16,8 +16,16 @@ bitmap.compressJpegli(outputStream = bos, quality = 70)
 
 # Add to project
 
+Add jitpack repository
+
 ```groovy
-implementation 'io.github.awxkee:jpegli-coder:1.0.0' // or any version above picker from release tags
+repositories {
+    maven { url "https://jitpack.io" }
+}
+```
+
+```groovy
+implementation 'com.github.awxkee:jpegli-coder:1.0.0' // or any version above picker from release tags
 ```
 
 # Copyrights
