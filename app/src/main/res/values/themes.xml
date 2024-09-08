@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ // Copyright 2024 (c) the Radzivon Bartoshyk. All rights reserved.
+  ~ //
+  ~ // Use of this source code is governed by a BSD-style
+  ~ // license that can be found in the LICENSE file.
+  -->
+
+<resources>
+
+    <style name="Theme.JpegliCoder" parent="android:Theme.Material.Light.NoActionBar" />
+</resources>
