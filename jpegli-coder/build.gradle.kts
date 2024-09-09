@@ -15,6 +15,25 @@ plugins {
     alias(libs.plugins.vanniktech.publish)
 }
 
+task("androidSourcesJar", Jar::class) {
+    archiveClassifier.set("sources")
+    from(android.sourceSets.getByName("main").java.srcDirs)
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("mavenJava") {
+                groupId = "com.github.awxkee"
+                artifactId = "jpegli-coder"
+                version = "1.0.0"
+                from(components["release"])
+//                artifact("androidSourcesJar")
+            }
+        }
+    }
+}
+
 mavenPublishing {
     configure(
         AndroidMultiVariantLibrary(
@@ -59,6 +78,13 @@ mavenPublishing {
 }
 
 android {
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
+
     namespace = "io.github.awxkee.jpegli.coder"
     compileSdk = 34
 
