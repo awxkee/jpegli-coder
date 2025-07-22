@@ -18,6 +18,8 @@ add_library(${CMAKE_PROJECT_NAME} SHARED
         hwy/targets.cc
         coder.cpp)
 
+target_link_options(jpeglicoder PRIVATE "-Wl,-z,max-page-size=16384")
+
 set_target_properties(jpeglicoder libjpegli PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/lib/${ANDROID_ABI}/libjpegli-static.a)
 
 target_include_directories(jpeglicoder PRIVATE ${CMAKE_SOURCE_DIR} ${CMAKE_SOURCE_DIR}/jpegli)
